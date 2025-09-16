@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sabareesh Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="script" href="script.js">
+</head>
+<body>
+<header style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 2rem; position: relative;">
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+  <div style="display: flex; align-items: center;">
+    <img src="Images/image.png" alt="Profile Picture" class="profile-picture" id="profileImage" style="margin: 0 1rem 0 0; align-self: flex-start;">
+    <div style="text-align: left;">
+      <h1>Sabareesh G</h1>
+      <p>Second-Year Computer Technology Undergraduate</p>
+      <button onclick="showModal()" style="margin-top: 0.5rem; background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">Change Profile</button>
+      <input type="file" id="fileInput" accept="image/*" style="display:none">
+    </div>
+  </div>
+</header>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="about">About</button>
+  <button class="tab-btn" data-tab="certificates">Certificates</button>
+  <button class="tab-btn" data-tab="experience">Experience</button>
+  <button class="tab-btn" data-tab="education">Education</button>
+  <button class="tab-btn" data-tab="skills">Skills</button>
+  <button class="tab-btn" data-tab="projects">Projects</button>
+  <button class="tab-btn" data-tab="resume">Resume</button>
+  <button class="tab-btn" data-tab="contact">Contact</button>
+</div>
+
+<section id="about" class="active">
+  <h2>About Me</h2>
+  <p>I'm <b>Sabareesh</b>, passionate about <b>software development</b> and <b>cybersecurity</b>. I enjoy turning challenges into opportunities and bringing ideas to life. For me, coding is not just about writing programs — it's about creating, innovating, and leading with purpose.</p>
+  <p>Currently, I'm a second-year Computer Technology undergraduate at <b>Bharathidasan College of Arts and Science</b>. I'm eager to learn, grow, and make a positive impact in the tech world.</p>
+</section>
+<section id="education">
+  <h2>Education</h2>
+  <p>Bharathidasan College of Arts and Science – B.Sc. in Computer Technology</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>HTML5 & Semantic Web</li>
+    <li>CSS3 & Modern Styling</li>
+    <li>JavaScript (ES6+)</li>
+    <li>Python Development</li>
+    <li>Web Development</li>
+    <li>Data Structures & Algorithms</li>
+    <li>Java Programming</li>     
+    <li>C Programming</li>
+    <li>C++ Development</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li><a href="https://github.com/Frozen-47/To-do" target="_blank">To-do List</a></li>
+    <li><a href="https://github.com/Frozen-47/Chatbot" target="_blank">Chatbot</a></li>
+    <li><a href="https://github.com/Frozen-47/WordsMuseum" target="_blank">Words Museum</a></li>
+    <li><a href="https://github.com/Frozen-47/Portfolio" target="_blank">Portfolio</a></li>
+  </ul>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <a href="Resume.pdf" target="_blank" class="download-button">Download CV</a>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:sabareeshgm47@gmail.com">sabareeshgm47@gmail.com</a></p>
+  <p>Phone: +91-7845840747</p>
+  <p>Location: Erode, India</p>
+  <div style="margin-top: 1rem;">
+    <a href="https://www.linkedin.com/in/sabareesh47" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/Frozen-47" target="_blank">GitHub</a> |
+    <a href="https://x.com/frozenn_47" target="_blank">Twitter</a> |
+    <a href="https://leetcode.com/u/Sabareesh_47/" target="_blank">Leetcode</a>
+  </div>
+</section>
+
+<section id="certificates">
+  <h2>Certificates</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <div style="text-align: center;">
+      <a href="https://skills.yourlearning.ibm.com/certificate/share/cb4dbf6da8ewogICJvYmplY3RUeXBlIiA6ICJBQ1RJVklUWSIsCiAgImxlYXJuZXJDTlVNIiA6ICI1MTA3MTI2UkVHIiwKICAib2JqZWN0SWQiIDogIk1ETC0yNjQiCn084db302c6f-10" target="_blank">
+        <img src="Cetifications/Bringing Websites to Life with JavaScript.jpg" alt="Bringing Websites to Life with JavaScript" style="max-width: 200px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      </a>
+      <p>Bringing Websites to Life <br> with JavaScript</p>
+    </div>
+    <div style="text-align: center;">
+      <a href="https://skills.yourlearning.ibm.com/certificate/share/5eb1389147ewogICJvYmplY3RJZCIgOiAiTURMLTI2NiIsCiAgIm9iamVjdFR5cGUiIDogIkFDVElWSVRZIiwKICAibGVhcm5lckNOVU0iIDogIjUxMDcxMjZSRUciCn00efe44b322-10" target="_blank">
+        <img src="Cetifications/Develop an Interactive Task List Web Page.jpg" alt="Develop an Interactive Task List Web Page" style="max-width: 200px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      </a>
+      <p>Develop an Interactive Task <br>List Web Page</p>
+    </div>
+    <div style="text-align: center;">
+      <a href="https://skills.yourlearning.ibm.com/certificate/share/5c4fbc8dc6ewogICJvYmplY3RUeXBlIiA6ICJBQ1RJVklUWSIsCiAgImxlYXJuZXJDTlVNIiA6ICI1MTA3MTI2UkVHIiwKICAib2JqZWN0SWQiIDogIk1ETC0yNjIiCn0259a5f59ba-10" target="_blank">
+        <img src="Cetifications/Developing Sites for the Web.jpg" alt="Developing Sites for the Web" style="max-width: 200px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      </a>
+      <p>Developing Sites for <br>the Web</p>
+    </div>
+    <div style="text-align: center;">
+      <a href="https://skills.yourlearning.ibm.com/certificate/share/42d1be6a71ewogICJvYmplY3RJZCIgOiAiTURMLTI2MyIsCiAgIm9iamVjdFR5cGUiIDogIkFDVElWSVRZIiwKICAibGVhcm5lckNOVU0iIDogIjUxMDcxMjZSRUciCn067c396ce1e-10" target="_blank">
+        <img src="Cetifications/Introduction to HTML and CSS.jpg" alt="Introduction to HTML and CSS" style="max-width: 200px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      </a>
+      <p>Introduction to HTML <br> and CSS</p>
+    </div>
+    <div style="text-align: center;">
+      <a href="https://skills.yourlearning.ibm.com/certificate/share/a581aa7c78ewogICJvYmplY3RJZCIgOiAiTURMLTI2NSIsCiAgIm9iamVjdFR5cGUiIDogIkFDVElWSVRZIiwKICAibGVhcm5lckNOVU0iIDogIjUxMDcxMjZSRUciCn02034effad3-10" target="_blank">
+        <img src="Cetifications/Website Testing and Deployment.jpg" alt="Website Testing and Deployment" style="max-width: 200px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      </a>
+      <p>Website Testing and <br> Deployment</p>
+    </div>
+    <div style="text-align: center;">
+      <a href="https://skills.yourlearning.ibm.com/certificate/share/44bbbbbf8fewogICJvYmplY3RUeXBlIiA6ICJBQ1RJVklUWSIsCiAgImxlYXJuZXJDTlVNIiA6ICI1MTA3MTI2UkVHIiwKICAib2JqZWN0SWQiIDogIk1ETC0yNjEiCn0a21f0ab6db-10" target="_blank">
+        <img src="Cetifications/Web Development Basics.jpg" alt="Web Development Basics" style="max-width: 200px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      </a>
+      <p>Web Development Basics</p>
+    </div>
+    <div style="text-align: center;">
+      <a href="https://skills.yourlearning.ibm.com/certificate/share/55e90d1247ewogICJvYmplY3RUeXBlIiA6ICJBQ1RJVklUWSIsCiAgImxlYXJuZXJDTlVNIiA6ICI1MTA3MTI2UkVHIiwKICAib2JqZWN0SWQiIDogIk1ETC0yNjciCn00c86240dfb-10" target="_blank">
+        <img src="Cetifications/Your Future in Web Development The Job Landscape.jpg" alt="Your Future in Web Development: The Job Landscape" style="max-width: 200px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      </a>
+      <p>Your Future in Web <br> Development: The Job Landscape</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Projects & Skills</h2>
+<ul>
+  <li><b>Data Structures & Algorithms</b><br>
+    Implemented problems and solutions in arrays, stacks, queues, linked lists, and trees to strengthen problem-solving skills.
+  </li>
+  <li><b>C & C++ Programming</b><br>
+    Built small programs focusing on memory management, OOP concepts, and algorithm optimization.
+  </li>
+  <li><b>Java Development</b><br>
+    Practiced core Java concepts including OOP, exception handling, collections, and basic application development.
+  </li>
+</ul>
+</section>
+
+<footer>
+  <p>&copy; 2025 Sabareesh G. All rights reserved.</p>
+</footer>
+
+<div class="modal" id="passwordModal">
+  <div class="modal-content">
+    <h3>Enter Password</h3>
+    <input type="password" id="passwordInput" placeholder="Password">
+    <div class="error" id="errorMsg"></div>
+    <button onclick="checkPassword()">Submit</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

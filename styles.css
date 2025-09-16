@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  color: #2b2525;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  background: linear-gradient(135deg, #1a237e, #283593);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem 5rem;
+  position: relative;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  position: relative;
+  margin-top: -80px;
+  margin-bottom: 1rem;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tabs button {
+  padding: 0.8rem 1.5rem;
+  background: #ffffff;
+  border: 2px solid #1a237e;
+  border-radius: 8px;
+  margin: 0.5rem;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a237e;
+  transition: all 0.3s ease;
+}
+
+.tabs button:hover,
+.tabs button.active {
+  background: #1a237e;
+  color: #fff;
+  border-color: #0d47a1;
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  display: none;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+}
+
+section.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  color: #1a237e;
+  margin-bottom: 1rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+.download-button {
+  display: inline-block;
+  background: #1a237e;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background: #0d47a1;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #1a237e;
+  color: white;
+  margin-top: 3rem;
+  transition: background-color 0.3s ease;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: white;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.modal-content button {
+  background: #1a237e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background: #0d47a1;
+}
+
+.modal-content .error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.dark-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #1a237e;
+  transition: all 0.3s ease;
+}
+
+.dark-toggle:hover {
+  background: #f0f0f0;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode header {
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+}
+
+.dark-mode .tabs {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+}
+
+.dark-mode .tabs button {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+.dark-mode .tabs button:hover,
+.dark-mode .tabs button.active {
+  background-color: #3949ab;
+  color: #fff;
+  border-color: #5c6bc0;
+}
+
+.dark-mode section {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+.dark-mode h2 {
+  color: #5c6bc0;
+}
+
+.dark-mode .download-button {
+  background: #5c6bc0;
+}
+
+.dark-mode .download-button:hover {
+  background: #3949ab;
+}
+
+.dark-mode footer {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.dark-mode .modal {
+  background: rgba(0,0,0,0.8);
+}
+
+.dark-mode .modal-content {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.dark-mode .modal-content input {
+  background: #3a3a3a;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+.dark-mode .modal-content input:focus {
+  border-color: #5c6bc0;
+  outline: none;
+}
+
+.dark-mode .modal-content button {
+  background: #5c6bc0;
+}
+
+.dark-mode .modal-content button:hover {
+  background: #3949ab;
+}
+
+.dark-mode .dark-toggle {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+.dark-mode .dark-toggle:hover {
+  background: #3a3a3a;
+}
+
+.dark-mode a {
+  color: #ffffff;
+}
+
+.dark-mode a:hover {
+  color: #000000;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: scale(0.95); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+@media (max-width: 600px) {
+  .tabs button {
+    flex: 1 0 100%;
+    padding: 0.75rem;
+    font-size: 15px;
+  }
+  
+  .profile-picture {
+    position: static;
+    margin-bottom: 1rem;
+  }
+  
+  header {
+    padding-bottom: 2rem;
+  }
+  
+  .dark-toggle {
+    position: static;
+    margin-bottom: 1rem;
+  }
+}
